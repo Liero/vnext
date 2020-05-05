@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "turan-vnext",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/turan-vnext"
+      },
+      "azureHosting": {
+        "subscription": "b3e0446f-a5c3-47ef-b2da-0b4b6b525bcf",
+        "resourceGroupName": "vnext-resource-group",
+        "account": "turanvnext"
+      }
+    }
+  ]
+}
