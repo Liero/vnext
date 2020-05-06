@@ -42,7 +42,7 @@ $secondary-background: #f7f8f9;
 $section-padding: 60px;
 
 body {
-  font-family: 'Segoe UI', SegoeUI, 'Segoe WP', Tahoma, Arial, sans-serif;
+  // font-family: from reboot, see bootstrap docs
   background-color: white;
   background: fixed top right no-repeat url('assets/media/wall-right-perspective.png');
   padding: 0;
@@ -82,6 +82,48 @@ a {
   100% {
     opacity: 0;
   }
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: $secondary-background;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
+}
+
+.section-title h2::before, .section-title h2::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: #3498db;
+  display: inline-block;
+}
+
+.section-title h2::before {
+  margin: 0 15px 10px 0;
+}
+
+.section-title h2::after {
+  margin: 0 0 10px 15px;
+}
+
+.section-title p {
+  margin: 15px 0 0 0;
 }
 
 #header {
@@ -146,7 +188,6 @@ h3 {
   font-weight: 400;
   font-size: 32px;
   color: #364146;
-  margin: 0 0 0 $spacer;
 }
 
 ul.checklist {
@@ -359,6 +400,92 @@ $icon-box-colors: (
     }
   }
 }
+
+.pricing {
+  .box {
+    &.featured {
+      border-color: #3498db;
+    }
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #e9ecee;
+
+    h3 {
+      font-weight: 400;
+      padding: 15px;
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #222222;
+    }
+
+    h4 {
+      font-size: 42px;
+      color: #3498db;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 20px;
+
+      sup {
+        font-size: 20px;
+        top: -15px;
+        left: -3px;
+      }
+
+      span {
+        color: #bababa;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      color: #222222;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+
+      li {
+        padding-bottom: 16px;
+      }
+
+      .na {
+        color: #ccc;
+        text-decoration: line-through;
+      }
+
+      i {
+        color: #3498db;
+        font-size: 18px;
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+
+.pricing .box .btn-wrap {
+  padding: 15px;
+  text-align: center;
+}
+
+.pricing {
+  .box {
+   
+  }
+}
+
+.pricing .featured {
+  border-color: #3498db;
+}
+
 
 
 
