@@ -14,19 +14,17 @@
   <a id="home" class="anchor"></a>
   <section class="home container">
     <div class="row">
-      <div
-        class="col-lg-6 pt-5 pt-lg-0 justify-content-center"
-        data-aos="fade-up">
-          <h1>Software Consulting</h1>
-          <div style="position: relative;">
-            <h2 id="home_subtitle_1">
-              I'm experienced software engineer and architect focused on Microsoft technologies
-            </h2>
-            <h2 id="home_subtitle_2" style="position: absolute; top: 0;">
-              I develop high quality custom software for businesses
-            </h2>
-          </div>
-          <a href="#offering" class="btn btn-outline-primary scrollto">Save up to 50%</a>
+      <div class="col-lg-6 pt-5 pt-lg-0 d-flex flex-column justify-content-center align-items-start" data-aos="fade-up">
+        <h1>Software Consulting</h1>
+        <div style="position: relative;">
+          <h2 id="home_subtitle_1">
+            I'm experienced software engineer and architect focused on Microsoft technologies
+          </h2>
+          <h2 id="home_subtitle_2" style="position: absolute; top: 0;">
+            I develop high quality custom software for businesses
+          </h2>
+        </div>
+        <a href="#save" class="btn btn-outline-primary scrollto">Save up to 40%</a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 home-img p-5" data-aos="fade-left">
         <img src="assets\media\primary-picture.svg" class="img-fluid animated" alt="" />
@@ -62,11 +60,11 @@
         </div> <!-- end row-->
         <p>
           I started to write computer code when I was 6 years old in a programming game called Baltazar. Soon
-          after, my father - also a professional programmer -
-          introduced me into QBasic and FoxPro. During primary school I discovered VBA, C++ and JavaScript.
+          after, my father - also a software engineer - introduced me into QBasic and FoxPro. During primary school I
+          discovered VBA, C++ and JavaScript.
         </p>
         <p>
-          I got to C# and .NET by mystake. I wanted to write games and C# seemed to be like C++ but more modern,
+          I started with C# and .NET by mystake. I wanted to write games and C# seemed to be like C++ but more modern,
           so it must be good for games :).
         </p>
         <p>
@@ -259,13 +257,6 @@
 
                   <h5 class="mt-2">Certifications</h5>
                   <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Year</th>
-                        <th>Certfication Name</th>
-                        <th></th>
-                      </tr>
-                    </thead>
                     <tbody>
                       <tr>
                         <td>2019</td>
@@ -385,8 +376,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-            data-aos-delay="100">
+          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon">
                 <svg viewBox="0 0 18 18">
@@ -401,8 +391,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-            data-aos-delay="200">
+          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box icon-box-blue">
               <div class="icon">
                 <svg viewBox="0 0 512 512">
@@ -416,8 +405,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-            data-aos-delay="300">
+          <div class="col-md-6 col-lg d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box icon-box-green">
               <div class="icon">
                 <svg>
@@ -454,9 +442,9 @@
         </div>
 
         <article>
-          <h3>The smaller, the better</h3>
+          <h3 data-aos="fade-up">The smaller, the better</h3>
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="zoom-in">
               <p>Have you heard of <a href="https://en.wikipedia.org/wiki/Ringelmann_effect">Ringelmann's effect?</a>
                 With each new team member, producivity per member decreases just because of social loafing.
               </p>
@@ -478,8 +466,8 @@
         </article>
 
         <article>
-          <h3>Minimize risk, maximize value</h3>
-          <p><em>
+          <h3 data-aos="fade-up">Minimize risk, maximize value</h3>
+          <p data-aos="fade-up"><em>
               21% of custom software projects fails and 50% customers are somewhat dissatisfied with the
               result.
             </em>
@@ -488,7 +476,7 @@
             <div class="col-lg-4">
               <img src="assets\media\agile-value-chart.png" class="img-fluid" alt="" data-aos="fade-right" />
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="zoom-in">
               <p> I deliver prototype that you can "touch & feel" right at the beginning. <span class="text-info">"Most
                   Viable Product"</span> with critical functionality follows soon after.
                 MVP will be simple as possible and delivered ASAP.
@@ -497,7 +485,8 @@
               </p>
               <p>
                 <span class="text-info">Business value</span> is maximized through tight feedback loop. You will be able
-                to continously test new features and provide feedback. Change requests are welcome. You can prioritize new features throughout the entire development cycle so
+                to continously test new features and provide feedback. Change requests are welcome. You can prioritize
+                new features throughout the entire development cycle so
                 that the features that provide the most business value are delivered first.
               </p>
               <p>
@@ -512,14 +501,50 @@
 
     <app-pricing></app-pricing>
 
+    <a id="save" class="anchor"></a>
     <section>
       <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>Frequently asked questions</h2>
+          <h2>Save up to 40% with Blazor Server Side</h2>
         </div>
-        <p>
-          Have you ever heard of Ringelmanns effect?
-        </p>
+        <div class="row">
+
+          <div class="col-lg-8" data-aos="zoom-in">
+            <p>When if not now is better time to look for opportunities to cut software development costs?
+            </p>
+
+            <p>Using <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor">Blazor</a> Server Side and carefully chosen development stack you can lower development cost of your
+              business web application up to 40% while still improving maintainability, testability, startup speed and
+              even
+              overall quality. How is that possible? </p>
+            <p>
+              Most developers knows Blazor as a pioneering WebAssembly framework for building Single Page Applications
+              leaving Blazor Server Side in shadow.
+              However, Blazor Server Side is a unique concept, that greatly reduces ammount of work required to build
+              business web applications.
+            </p>
+
+            <p>Single development stack for backend and frontend is tremendous advantage by itself, especially when it
+              is .NET.
+              But server side Blazor goes much further:
+              <ul>
+                <li>It saves time spent on API's twice - on backend and frontend. No serialization, deserialization,
+                  swagger, no API authorization, less security issues.</li>
+                <li>Single test framework covers BE and FE and without browser automation which makes testing much
+                  easier.</li>
+                <li>There is no need to worry about bundle sizes which typically grow very quickly and increases
+                  traditional SPA startup time. No need to worry about lazy loading and related issues..</li>
+              </ul>
+
+              <p>Let me know if you plan to modernize your existing line of business application or write completely new
+                from scratch.</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets\media\blazor_vs_spa.png" class="img-fluid" alt="" data-aos="fade-left"
+              data-aos-delay="100" />
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
