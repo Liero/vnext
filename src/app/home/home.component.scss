@@ -1,0 +1,81 @@
+#home_subtitle_1 {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+#home_subtitle_2 {
+  opacity: 0;
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.home {
+  background: top right no-repeat url('../../assets/media/wall-right-perspective.png');
+  background-size: contain;
+  @media (min-width: 1024px) {
+    background-attachment: fixed;
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    color: #364146;
+  }
+
+  h2 {
+    color: #576971;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+
+  .home-img {
+    text-align: center;
+    .animated {
+      max-height: 400px;
+      width: 70%;
+      animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    }
+  }
+}
