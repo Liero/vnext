@@ -1,0 +1,14 @@
+@import "../../common.scss";
+
+nav {
+  a {
+    transition: 0.3s;
+
+    &:hover {
+      color: #009cea;
+    }
+  }
+  button:focus {
+    outline: 1px dotted;
+  }
+}

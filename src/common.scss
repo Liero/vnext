@@ -1,0 +1,26 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+
+// custom colors:
+$header-light-color: #576971;
+
+
+$blue: #009cea;
+
+
+
+$theme-colors: map-remove($theme-colors, "success", "secondary", "info", "danger");
+$navbar-light-color: #7b909a;
+$navbar-light-hover-color: $blue;
+$navbar-light-brand-color: $header-light-color;
+$navbar-light-toggler-border-color: transparent;
+$navbar-light-toggler-icon-bg:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-brand-font-size: 1.8rem;
+$secondary-background: #f7f8f9;
+
+
+$header-height: 70px;
+$section-padding: 60px;
+
