@@ -1,0 +1,29 @@
+.info {
+  ::ng-deep.bi-lg {
+    font-size: 32px;
+    color: #3498db;
+    float: left;
+    line-height: 1;
+  }
+
+  p {
+    padding: 0 0 10px 42px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 5px
+}
+.modal {
+  background: #0007;
+  .modal-lg {
+    height: calc(100% - 40px);
+  }
+  .modal-content {
+    height: 100%;
+  }
+}

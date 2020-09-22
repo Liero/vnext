@@ -1,0 +1,60 @@
+<a id="contact" class="anchor"></a>
+<section>
+  <div class="contact container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Contact us</h2>
+    </div>
+    <div class="info mt-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+      <div class="d-flex flex-wrap justify-content-between">
+        <div>
+          <svg class="bi bi-lg" fill="currentColor">
+            <use xlink:href="assets/media/icons.svg#map-pin"></use>
+          </svg>
+          <p>Miletičova 46, 821 08 Bratislava, Slovakia</p>
+        </div>
+
+        <div>
+          <app-icon svgClass="bi-lg" icon="mail-send"></app-icon>
+          <p>daniel<app-icon icon="at-line"></app-icon>turan.sk
+        </div>
+
+        <div>
+          <svg class="bi bi-lg" fill="currentColor">
+            <use xlink:href="assets/media/icons.svg#phone"></use>
+          </svg>
+          <p><a href="tel:+421902875983">+421 902 875 983</a></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="btn btn-outline-primary" (click)="contactFormVisible=true">
+      Fill Online Form
+    </div>
+
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" 
+        *ngIf="contactFormVisible"
+        (click)="contactFormVisible=false">
+      <div class="modal-dialog modal-lg" role="document" >
+        <div class="modal-content">
+          <button type="button" class="close" (click)="contactFormVisible=false">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe width="100%" height="100%"
+                  src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__sTyV4NUM0JUMEdCRDJBQkY0WFpWOU5LNFlYRlRMUy4u&embed=true"
+                  frameborder="0"
+                  marginwidth="0"
+                  marginheight="0"
+                  style="border: none; max-width:100%; max-height:100vh"
+                  allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>
