@@ -30,10 +30,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm install
+      - name: npm ci (installs packages)
         run: |
-          npm i
+          npm ci
 
       - name: npm build
         run: |
           npm run build-prod
+          
+      - name: upload artifact
+        uses: actions/upload-artifact@v2.x
+        with:
+          name: dist
+          path: dist
