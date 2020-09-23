@@ -33,8 +33,7 @@ jobs:
       - name: npm install
         run: |
           npm i
-          npm run build:prod
 
       - name: npm build
         run: |
-          npm run build:prod
+          npm run build-prod
