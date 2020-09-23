@@ -60,6 +60,6 @@ jobs:
         with:
           user:  ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          host: ${{ secrets.ftp_host }}
+          host: ftp://turan.sk
           path: dist
-          into: turan.sk/_sub/daniel/beta
+          into: /turan.sk/_sub/daniel/beta
