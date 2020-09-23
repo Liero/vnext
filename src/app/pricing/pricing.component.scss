@@ -44,7 +44,7 @@
     ul {
       padding: 0;
       list-style: none;
-      color: #222222;
+      color: #444444;
       text-align: center;
       line-height: 20px;
       font-size: 14px;
@@ -68,5 +68,19 @@
     .box .btn-wrap {
       padding: 15px;
       text-align: center;
+    }
+
+    .advanced-label {
+      display: block;
+      position: absolute;
+      width: 200px;
+      top: 28px;
+      right: -58px;
+      transform: rotate(45deg);
+      z-index: 1;
+      font-size: 14px;
+      padding: 1px 0 3px 0 25px;
+      background: #009cea;
+      color: #fff;
     }
   }
