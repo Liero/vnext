@@ -54,11 +54,12 @@ jobs:
         with:
           name: dist
           path: dist
-  
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+          
+      - name: copy to ftp
+        uses: isthatcentered/dist-to-ftp@v1
         with:
-          ftp-server: ${{ secrets.ftp_server_beta }}
-          ftp-username: ${{ secrets.ftp_username }}
-          ftp-password: ${{ secrets.ftp_password }}
-          local-dir: dist
+          user:  ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          host: ${{ secrets.ftp_host }}
+          path: dist
+          into: ${{ secrets.ftp_path_beta }}
