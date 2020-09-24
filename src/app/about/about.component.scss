@@ -1,0 +1,11 @@
+@import '../../common.scss';
+.about {
+  .container {
+    background: $secondary-background;
+    padding: $section-padding 50px;
+
+    @include media-breakpoint-down(md) {
+      padding: $section-padding / 2;
+    }
+  }
+}

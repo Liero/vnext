@@ -188,37 +188,14 @@ ul.checklist {
   }
 }
 
-.about {
-  .container {
-    background: $secondary-background;
-    padding: $section-padding 50px;
-
-    @include media-breakpoint-down(md) {
-      padding: $section-padding / 2;
-    }
-  }
-}
-
 .tags {
   .badge {
     margin-right: 10px;
   }
 }
 
-#resume-experience {
-  .row {
-    margin-top: 10px;
-  }
 
-  .col-time-range {
-    width: 125px;
-  }
 
-}
-
-.certification-icon {
-  width: 50px;
-}
 
 .features {
   padding-top: $section-padding;

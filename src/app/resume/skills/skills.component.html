@@ -1,0 +1,85 @@
+<figure>
+  <table class="table" data-aos="fade-up">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Proficiency</th>
+        <th>Experience</th>
+        <th>Last Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>C# / .NET</td>
+        <td>Expert</td>
+        <td>13 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>ASP.NET</td>
+        <td>Expert</td>
+        <td>7 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>JavaScript / TypeScript</td>
+        <td>Expert</td>
+        <td>8 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>Angular / React</td>
+        <td>Expert</td>
+        <td>4 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>Azure (PaaS)</td>
+        <td>Advanced</td>
+        <td>3 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>DevOps</td>
+        <td>Advanced</td>
+        <td>2 years</td>
+        <td>2019</td>
+      </tr>
+      <tr>
+        <td>SCRUM / Agile Development & Methods</td>
+        <td>Advanced</td>
+        <td>4 years</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>SQL Server</td>
+        <td>Advanced</td>
+        <td>4 years</td>
+        <td>2019</td>
+      </tr>
+      <tr>
+        <td>UWP / WPF</td>
+        <td>Expert</td>
+        <td>7 years</td>
+        <td>2017</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="tags" data-aos="fade-up" data-aos-delay="300">
+    <span class="badge badge-info" *ngFor="let skill of [
+    'Blazor',
+    'Microsoft Graph API',
+    'Web Services (SOAP / WSDL, REST)',
+    'Cosmos DB (NoSQL)',
+    'CQRS',
+    'Event Sourcing',
+    'Azure Functions',
+    'Sharepoint',
+    'Web Api',
+    'XAML',
+    'Continuous Delivery',
+    'Docker']; let index=index;">
+      {{ skill}}
+    </span>
+  </p>
+</figure>
