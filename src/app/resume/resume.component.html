@@ -4,50 +4,55 @@
 
     <div class="row">
       <div class="col-lg-6 mb-tg-0 order-2 order-lg-1">
-
-        <ul class="nav nav-tabs flex-column" role="tablist">
-          <li class="nav-item" data-aos="fade-up">
-            <a class="nav-link active" data-toggle="tab" href="#resume-expertise" role="tab">
-              <h4>Technology Expertise</h4>
-              <p>Microsoft Certified Professional Developer</p>
-            </a>
-          </li>
-          <li class="nav-item" data-aos="fade-up" data-aos-delay="100">
-            <a class="nav-link" data-toggle="tab" href="#resume-experience" role="tab">
-              <h4>Work Experience</h4>
-              <p>I've worked in a startup, medium size and world largest technology consulting company</p>
-            </a>
-          </li>
-          <li class="nav-item" data-aos="fade-up" data-aos-delay="200">
-            <a class="nav-link" data-toggle="tab" href="#resume-education" role="tab">
-              <h4>Education</h4>
-              <p>Bachelors degree in Computer Science, Microsoft Certified Professional Developer</p>
-            </a>
-          </li>
-          <li class="nav-item" data-aos="fade-up" data-aos-delay="300">
-            <a class="nav-link" data-toggle="tab" href="#resume-achievements" role="tab">
-              <h4>Achievements</h4>
+        <ul class="nav nav-tabs flex-column d-none d-lg-flex" role="tablist">
+          <li *ngFor="let tab of tabs; let index = index"
+              class="nav-item"
+              data-aos="fade-up"
+              [attr.data-aos-delay]="index * 100">
+            <a class="nav-link"
+               [class.active]="index === 0"
+               [href]="'#resume-tab-' + tab.id"
+               data-toggle="tab" role="tab">
+              <h4>{{ tab.title}}</h4>
+              <p>{{ tab.description }}</p>
             </a>
           </li>
         </ul>
       </div>
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="tab-content">
-          <div class="tab-pane fade show active" id="resume-expertise" role="tabpanel">
-              <app-skills></app-skills>
-          </div>
-          <div class="tab-pane fade" id="resume-experience" role="tabpanel">
-              <app-experience></app-experience>
-          </div>
-          <div class="tab-pane" id="resume-education" role="tabpanel">
-              <app-education></app-education>
-          </div>
-          <div class="tab-pane" id="resume-achievements" role="tabpanel">
-              <app-achievements></app-achievements>
-          </div>
+          <ng-container *ngFor="let tab of tabs; let index = index">
+            <div class="mobile-tab d-lg-none"
+                 [class.collapsed]="index >= 0"
+                 data-toggle="collapse"
+                 [attr.data-target]="'#resume-tab-' + tab.id">
+              <a [id]="'resume' + tab.id" class="anchor"></a>
+              <h4>{{tab.title}}</h4>
+            </div>
+            <div class="tab-pane fade"
+                 [class.show]="index === 0"
+                 [class.active]="index === 0"
+                 [id]="'resume-tab-' + tab.id"
+                 role="tabpanel">
+              <ng-container *ngTemplateOutlet="getTemplate(tab.id)"></ng-container>
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
+<ng-template #skills>
+  <app-skills></app-skills>
+</ng-template>
+<ng-template #experience>
+  <app-experience></app-experience>
+</ng-template>
+<ng-template #education>
+  <app-education></app-education>
+</ng-template>
+<ng-template #achievements>
+  <app-achievements></app-achievements>
+</ng-template>

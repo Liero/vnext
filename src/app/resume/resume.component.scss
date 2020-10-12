@@ -1,0 +1,36 @@
+@import '../../common.scss';
+
+@include media-breakpoint-down(lg) {
+  .mobile-tab {
+    border: 0;
+    padding: 20px;
+    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    border-radius: 0;
+    border-left: 4px solid #009cea;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+      color: #576971;
+    }
+    
+    cursor: pointer;
+  }
+  .tab-pane {
+    margin-bottom: $spacer;
+
+    &.active {
+      display: none;
+    }
+
+    &.collapsing {
+      display: block !important;
+    }
+
+    &.show {
+      display: block !important;
+    }
+  }
+}

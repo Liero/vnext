@@ -227,6 +227,11 @@ ul.checklist {
       font-weight: 600;
       transition: 0.3s ease-in-out;
       color: #576971;
+      &:after {
+        content: "more";
+        font-weight: 900;
+        float: right;
+      }
     }
 
     p {
