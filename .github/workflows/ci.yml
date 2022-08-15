@@ -51,9 +51,9 @@ jobs:
     with:
       ftp_path: 'turan.sk/_sub/daniel/beta/'
     secrets:
-        ftp_host: ${{ secrets.ftp_host }}
-        ftp_username: ${{ secrets.ftp_username }}
-        ftp_password: ${{ secrets.ftp_password }}
+      ftp_host: ${{ secrets.ftp_host }}
+      ftp_username: ${{ secrets.ftp_username }}
+      ftp_password: ${{ secrets.ftp_password }}
     needs: [build]
 
   deploy-production:
@@ -61,9 +61,9 @@ jobs:
     with:
       ftp_path: 'turan.sk/_sub/daniel/'
     secrets:
-        ftp_host: ${{ secrets.ftp_host }}
-        ftp_username: ${{ secrets.ftp_username }}
-        ftp_password: ${{ secrets.ftp_password }}        
+      ftp_host: ${{ secrets.ftp_host }}
+      ftp_username: ${{ secrets.ftp_username }}
+      ftp_password: ${{ secrets.ftp_password }}        
     needs: [build]
-    environment:
+    env:
       name: production
