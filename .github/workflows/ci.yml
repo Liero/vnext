@@ -57,8 +57,8 @@ jobs:
     needs: [build]
 
   deploy:
-    uses: './.github/workflows/deploy_reusable.yml'  
     environment: production
+    uses: './.github/workflows/deploy_reusable.yml'  
     with:
       ftp_path: 'turan.sk/_sub/daniel/'
     secrets:
