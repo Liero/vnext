@@ -54,12 +54,15 @@ jobs:
         with:
           name: dist
           path: dist
-          
+
       - name: copy to ftp
-        uses: isthatcentered/dist-to-ftp@v1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          user:  ${{ secrets.ftp_username }}
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          host: ${{ secrets.ftp_host }}
-          path: dist/turan-vnext
-          into: ${{ secrets.ftp_path_beta }}
+          local-dir: ./dist/turan-vnext/
+          server-dir: ${{ secrets.ftp_path_beta }}
+          state-name: 'ftp-deploy-state.txt'
+          log-level: verbose
+          exclude: beta/assets/*.*
