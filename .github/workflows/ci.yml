@@ -64,5 +64,5 @@ jobs:
         ftp_host: ${{ secrets.ftp_host }}
         ftp_username: ${{ secrets.ftp_username }}
         ftp_password: ${{ secrets.ftp_password }}        
-    environment: production,
+    environment: production
     needs: [build]
