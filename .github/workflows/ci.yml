@@ -48,21 +48,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
-    steps: 
-      - name: download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
-
-      - name: copy to ftp
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: ${{ secrets.ftp_host }}
-          username: ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
-          local-dir: ./dist/turan-vnext/
-          server-dir: ${{ secrets.ftp_path_beta }}
-          state-name: 'ftp-deploy-state.txt'
-          log-level: verbose
-          exclude: beta/assets/*.*
+    uses: './.github/workflows/deploy_reusable.yml'  
+    with:
+      ftp_path: 'turan.sk/_sub/daniel/beta/'
+    secrets:
+        ftp_host: ${{ secrets.ftp_host }}
+        ftp_username: ${{ secrets.ftp_username }}
+        ftp_password: ${{ secrets.ftp_password }}
