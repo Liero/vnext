@@ -63,4 +63,6 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./dist/turan-vnext/
           server-dir: ${{ secrets.ftp_path_beta }}
-          exclude: beta/**/*.*
+          state-name: 'ftp-deploy-state.txt'
+          log-level: verbose
+          exclude: beta/assets/*.*
