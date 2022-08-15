@@ -6,6 +6,9 @@ on:
       ftp_path:
         required: true
         type: string
+      environment:
+        type: string
+
     secrets:
       ftp_host:
         required: true
@@ -16,6 +19,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     steps: 
       - name: download artifact
         uses: actions/download-artifact@v2

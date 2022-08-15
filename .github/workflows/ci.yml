@@ -48,22 +48,21 @@ jobs:
 
   deploy-beta:
     uses: './.github/workflows/deploy_reusable.yml'  
+    needs: [build]
     with:
       ftp_path: 'turan.sk/_sub/daniel/beta/'
     secrets:
       ftp_host: ${{ secrets.ftp_host }}
       ftp_username: ${{ secrets.ftp_username }}
       ftp_password: ${{ secrets.ftp_password }}
-    needs: [build]
 
   deploy-production:
     uses: './.github/workflows/deploy_reusable.yml'  
+    needs: [build]
     with:
       ftp_path: 'turan.sk/_sub/daniel/'
+      environment: 'production'
     secrets:
       ftp_host: ${{ secrets.ftp_host }}
       ftp_username: ${{ secrets.ftp_username }}
       ftp_password: ${{ secrets.ftp_password }}        
-    needs: [build]
-    env:
-      name: production
